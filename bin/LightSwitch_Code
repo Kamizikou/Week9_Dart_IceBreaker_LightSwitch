@@ -1,0 +1,68 @@
+class LightSwitch {
+  String color;
+  String material;
+  String position;
+
+  bool _isOn;
+
+  LightSwitch({
+    required this.color,
+    required this.material,
+    this.position = "Down",
+    bool isOn = false,
+  }) : _isOn = isOn;
+
+  bool get isOn => _isOn;
+
+  void flipUp() {
+    position = "Up";
+    _isOn = true;
+    print("Flipped UP -> The light turns ON.");
+  }
+
+  void flipDown() {
+    position = "Down";
+    _isOn = false;
+    print("Flipped DOWN -> The light turns OFF.");
+  }
+
+  void displayStatus() {
+    String status = _isOn ? "ON" : "OFF";
+    print("[$color $material Switch] Position: $position | Light Status:    $status");
+}
+}
+
+
+void main() {
+
+  LightSwitch livingRoomSwitch = LightSwitch(
+    color: "white",
+    material: "plastic body",
+    position: "Down",
+    isOn: false,
+  );
+
+  LightSwitch bedroomSwitch = LightSwitch(
+    color: "black",
+    material: "plastic body",
+    position: "Up",
+    isOn: true,
+  );
+
+
+  List<LightSwitch> switches = [livingRoomSwitch, bedroomSwitch];
+
+  print("=== Initial Switch States ===");
+  for (var s in switches) {
+    s.displayStatus();
+  }
+
+  print("\n=== Interacting with Switches ===");
+  print("Turning on the living room light...");
+  switches[0].flipUp();
+  switches[0].displayStatus();
+
+  print("\nTurning off the bedroom light...");
+  switches[1].flipDown();
+  switches[1].displayStatus();
+}

@@ -6,7 +6,7 @@
 
 ---
 
-## Scenario Description
+## Description
 This Dart application models a real-world **Light Switch** using Object-Oriented Programming (OOP) principles. It demonstrates class structure, constructors, encapsulation using private state variables, methods for behavior, and collection management via a `List` of objects.
 
 ---

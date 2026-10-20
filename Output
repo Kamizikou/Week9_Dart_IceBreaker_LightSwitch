@@ -1,0 +1,12 @@
+=== Initial Switch States ===
+[white plastic body Switch] Position: Down | Light Status:    OFF
+[black plastic body Switch] Position: Up | Light Status:    ON
+
+=== Interacting with Switches ===
+Turning on the living room light...
+Flipped UP -> The light turns ON.
+[white plastic body Switch] Position: Up | Light Status:    ON
+
+Turning off the bedroom light...
+Flipped DOWN -> The light turns OFF.
+[black plastic body Switch] Position: Down | Light Status:    OFF
